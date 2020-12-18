@@ -4,7 +4,7 @@ module.exports = function (sequelize, DataTypes) {
       seller_name: {
         type: DataTypes.STRING,
         required: true,
-        allowNull: false,
+        allowNull: true,
        // validate: {
          // is: ["^[a-z]+$", 'i'],
         // }
@@ -18,11 +18,11 @@ module.exports = function (sequelize, DataTypes) {
   
       sellers_email: {
         type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-        validate: {
-          isEmail: true
-        }
+        allowNull: true,
+        unique: false,
+        // validate: {
+        //   isEmail: true
+        // }
       },
   
    

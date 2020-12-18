@@ -7,7 +7,7 @@ module.exports = function(app) {
     });
 };
 
-$.get("/api/newseller", function(data) {
+$.get("/newseller", function(data) {
   console.log("data: ", data);
   const container = $(".card-columns")
   if (data.length !==0) {
@@ -28,3 +28,9 @@ $.get("/api/newseller", function(data) {
       }
     };
  });
+
+
+
+//     $('.close-div').click(function(){
+//    $(this).parent().parent().remove();
+// });

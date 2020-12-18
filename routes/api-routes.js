@@ -17,11 +17,12 @@ module.exports = function(app) {
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
-  app.get('/api/newseller', async (req, res) => {
-    const allSellers = await db.Sellers.findAll({})
+  // app.get('/newseller', async (req, res) => {
+  //   const allSellers = await db.Sellers.findAll({})
 
-    res.json(allSellers)
-  })
+  //   res.json(allSellers)
+  // })
+
 
   app.post("/newseller", (req, res) => {
     console.log(req.body)
@@ -39,6 +40,32 @@ module.exports = function(app) {
     })
     
   });
+
+  app.get("/newseller", function(data) {
+    console.log("data: ", data);
+    const container = $(".card-columns")
+    if (data.length !==0) {
+        for (let i = 0; i < data.length; i++) {
+            container.append(
+            `
+            <div class="card">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="item-name">${data[i].item_name}</h5>
+                    <h6 class="item-price">$${data[i].item_price}</h6>
+                    <p class="contact-info"><small class="text-muted">${data[i].seller_contact}</small></p>
+                  <button type="button" class="btn btn-outline-success">Purchase</button>
+                </div>
+              </div>
+              `
+            )
+        }
+      };
+   });
+
+  // app.get("/newseller", (req, res) => {
+
+  // })
 
   // Route for logging user out
   app.get("/logout", (req, res) => {

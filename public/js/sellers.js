@@ -3,7 +3,7 @@ $(document).ready(() => {
   
   const sellername = $("#seller-name-input");
   console.log(sellername)
-  const selleraddress = $("#seller-address");
+  // const selleraddress = $("#seller-address");
   const selleremail = $("#seller-email");
  
   const itemInput = $("#item-input");

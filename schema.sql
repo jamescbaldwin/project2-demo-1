@@ -13,14 +13,14 @@ date TIMESTAMP,
 PRIMARY KEY (id)
 );
 
-CREATE TABLE buyers(
-id INT NOT NULL AUTO_INCREMENT,
-buyer_name VARCHAR(50) NOT NULL,
-buyer_budget INT(50) NOT NULL,
-purchased BOOLEAN default false,
-date TIMESTAMP,
-PRIMARY KEY (id)
-);
+-- CREATE TABLE buyers(
+-- id INT NOT NULL AUTO_INCREMENT,
+-- buyer_name VARCHAR(50) NOT NULL,
+-- buyer_budget INT(50) NOT NULL,
+-- purchased BOOLEAN default false,
+-- date TIMESTAMP,
+-- PRIMARY KEY (id)
+-- );
 
 CREATE TABLE items(
 id INT NOT NULL AUTO_INCREMENT,
