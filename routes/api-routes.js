@@ -1,5 +1,5 @@
 // Requiring our models and passport as we've configured it
-const db = require("../models");
+const db = require('../models')
 const passport = require("../config/passport");
 
 module.exports = function(app) {
@@ -17,17 +17,27 @@ module.exports = function(app) {
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
-  app.post("/api/signup", (req, res) => {
-    db.User.create({
-      email: req.body.email,
-      password: req.body.password
+  app.get('/api/newseller', async (req, res) => {
+    const allSellers = await db.Sellers.findAll({})
+
+    res.json(allSellers)
+  })
+
+  app.post("/newseller", (req, res) => {
+    console.log(req.body)
+    db.Sellers.create({
+      seller_name: req.body.seller_name,
+      sellers_address: req.body.sellers_address,
+      sellers_email: req.body.sellers_email,
+      seller_bio: req.body.seller_bio,
+      item_name: req.body.item_name,
+      item_price: req.body.item_price,
     })
-      .then(() => {
-        res.redirect(307, "/api/login");
-      })
-      .catch(err => {
-        res.status(401).json(err);
-      });
+
+//    db.Item.create({
+  //    item_name: req.body.item_name
+   //  })
+    
   });
 
   // Route for logging user out
@@ -51,3 +61,14 @@ module.exports = function(app) {
     }
   });
 };
+
+// work on that with tutor
+// figure out how to make it work in this file
+//const Item = require("../models/model");
+// module.exports = function(app) {
+//     app.get("/api/all", (req, res) => {
+//         Item.findAll({}).then(function(results) {
+//             res.json(results);
+//         });
+//     });
+// };

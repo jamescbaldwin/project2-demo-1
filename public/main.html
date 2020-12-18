@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Yard Sale</title>
+  <link rel="stylesheet" href="stylesheets/main.css">
+  <link rel="stylesheet" href='stylesheets/slider.css'>
+  <script src="/js/slider.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">YARD SALE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/buyers">Buy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/seller">Sell</a>
+        </li>
+
+      </ul>
+      <!-- <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-light my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </nav>
+  <!-- <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4" id='jumbo'>yardSale</h1>
+        <p class="lead">Buying & Selling made easy!</p>
+      </div>
+    </div>
+    @@ -53,17 +53,48 @@  -->
+  
+    <div class="ism-slider" data-transition_type="fade" data-play_type="loop" data-interval="3000" id="my-slider">
+      <ol>
+        <li>
+          <img src="/sliderContent/assets/apparel.jpg">
+          <div class="ism-caption ism-caption-0" data-delay='200'>Apparel</div>
+        </li>
+        <li>
+          <img src='sliderContent/assets/homeDecor.jpg'>
+          <div class="ism-caption ism-caption-0" data-delay='200'>Furniture</div>
+        </li>
+        <li>
+          <img src='sliderContent/assets/games.jpg'>
+          <div class="ism-caption ism-caption-0" data-delay='200'>Gaming</div>
+        </li>
+        <li>
+          <img src='sliderContent/assets/gardening.jpg'>
+          <div class="ism-caption ism-caption-0" data-delay='200'>Outdoors &amp; Gardening</div>
+        </li>
+        <li>
+          <img src='sliderContent/assets/gym.jpg'>
+          <div class="ism-caption ism-caption-0" data-delay='200'>Sporting Goods</div>
+        </li>
+        <li>
+          <img src='sliderContent/assets/toddler.jpg'>
+          <div class="ism-caption ism-caption-0" data-delay='200'>Toys &amp; Toddlers</div>
+        </li>
+      </ol>
+    </div>
+    <!-- <p class="ism-badge" id="my-slider-ism-badge"><a class="ism-link" href="http://imageslidermaker.com" rel="nofollow">generated with ISM</a></p>
+          </div>
+     -->
+    <!-- Buy Section needs linking -->
+    <div id='buyBox'>
+      <a class='link' href="/buyers">BUY</a>
+    </div>
+    <!-- sell section needs linking  -->
+    <div id='sellBox'>
+      <a class='link' href="/seller">SELL</a>
+    </div>
+    <div id='categoryBox'>
+      <h1 id='categoryh1'>Categories</h1><br>
+      <!-- <div id='categoryList'> -->
+      <ul style="list-style-type:none">
+        <a class="link2" href="#">Apparel</a><br>
+        <a class="link2" href="#">Automotive</a><br>
+        <a class="link2" href="#">Electronics</a><br>
+        <a class="link2" href="#">Furniture</a><br>
+        <a class="link2" href="#">Gaming</a><br>
+        <a class="link2" href="#">Home Decor'</a><br>
+        <a class="link2" href="#">Jewelry</a><br>
+        <a class="link2" href="#">Miscellaneous</a><br>
+        <a class="link2" href="#">Outdoor and Garden</a><br>
+        <a class="link2" href="#">Sporting Goods</a><br>
+        <a class="link2" href="#">Toys/Toddler</a><br>
+      </ul>
+    </div>
+    <!-- dropdown box 
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+       <h1>Categories</h1>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <li><button class="dropdown-item" type="button">Apparel</button></li>
+        <li><button class="dropdown-item" type="button">Appliances</button></li>
+        <li><button class="dropdown-item" type="button">Automotive</button></li>
+        <li><button class="dropdown-item" type="button">Electronics</button></li>
+        <li><button class="dropdown-item" type="button">Furniture</button></li>
+        <li><button class="dropdown-item" type="button">Gaming</button></li>
+        <li><button class="dropdown-item" type="button">Home Decor</button></li>
+        <li><button class="dropdown-item" type="button">Jewelry</button></li>
+        <li><button class="dropdown-item" type="button">Miscellaneous</button></li>
+        <li><button class="dropdown-item" type="button">Outdoor and Garden</button></li>
+        <li><button class="dropdown-item" type="button">Sporting Goods</button></li>
+        <li><button class="dropdown-item" type="button">Toys and Toddler</button></li>
+      </ul>
+    </div>
+</div> -->
+    <!-- <div id='bodyText'>
+  <p>Why choose YardSale?</p>
+  <p>A local way to buy/sell goods. We make it EASY.</p>
+</div> -->
+</body>
+
+</html>

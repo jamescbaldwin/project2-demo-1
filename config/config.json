@@ -2,19 +2,23 @@
   "development": {
     "username": "root",
     "password": "rootpassword",
-    "database": "passport_demo",
-    "host": "127.0.0.1",
+    "database": "yardsale_db",
+    "host": "localhost",
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "eqq4z0d61h1t34oy",
+    "password": "g9fptiv7oups8nm5",
+    "database": "yyumxdc3d6fz5q40",
+    "host": "o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
+    "username": "eqq4z0d61h1t34oy",
+    "password": "g9fptiv7oups8nm5",
+    "database": "yyumxdc3d6fz5q40",
+    "host": "o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
