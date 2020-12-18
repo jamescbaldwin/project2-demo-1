@@ -21,9 +21,8 @@ module.exports = function(sequelize, DataTypes) {
     Item.associate = function(models) {
       
         Item.belongsTo(models.Sellers, {
-          foreignKey: {
-            allowNull: false
-          }
+          foreignKey: "SellerId",
+          allowNull: false
         });
       };
 
